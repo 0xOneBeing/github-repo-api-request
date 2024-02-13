@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Repo API Request</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="./assets/js/script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>GitHub Repositories</h1>
+      <div class="form">
+        <input type="text" id="username" placeholder="Enter GitHub username" />
+        <button type="button" class="getRepoBtn" onclick="getRepositories()">
+          Get Repositories
+        </button>
+      </div>
+
+      <div id="error-message"></div>
+      <div id="loading">Loading...</div>
+      <ul id="repositories"></ul>
+      <div id="pagination">
+        <button class="navi" id="prevButton" onclick="prevPage()" disabled>
+          Prev
+        </button>
+        <span id="page">Page 1</span>
+        <button class="navi" id="nextButton" onclick="nextPage()" disabled>
+          Next
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
